@@ -76,6 +76,24 @@ func registerUser(name string, blacklist Blacklist) {
 	}
 }
 
+//defer panic recover function
+
+func logging() {
+	fmt.Println("Selesai memanggil function")
+}
+
+func runApplication() {
+	defer logging()
+
+	fmt.Println("Run Application")
+
+}
+
+func runApp(error bool) {
+	defer logging()
+
+}
+
 func main() {
 	sayHello()
 	sayHelloParameter("ilham", "mahli")
@@ -114,6 +132,8 @@ func main() {
 
 	fmt.Println(factorialLoop(10))
 	fmt.Println(factorialRecursif(10))
+
+	runApplication()
 }
 
 //recursif function vs loop function
