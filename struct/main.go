@@ -9,6 +9,11 @@ type Customer struct {
 	Married bool
 }
 
+//struct method
+func (customer Customer) sayHello(name string) {
+	fmt.Println("Hello", name, "my name is", customer.Name)
+}
+
 func main() {
 	// This is a placeholder for the main function.
 	var ilham Customer
@@ -18,4 +23,14 @@ func main() {
 	ilham.Married = false
 
 	fmt.Println(ilham)
+
+	mahli := Customer{
+		Name:    "mahli ilham",
+		Address: "jl. sudirman no. 20",
+		Age:     21,
+		Married: true,
+	}
+	fmt.Println(mahli)
+
+	mahli.sayHello("agus")
 }
