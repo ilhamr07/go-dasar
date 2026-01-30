@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Address struct {
 	City, Province, Country string
 }
@@ -11,7 +13,12 @@ func main() {
 
 	address4.City = "Bandung"
 
-	println(address3.City) //berubah menjadi bandung
-	println(address4.City) //berubah menjadi bandung
+	fmt.Println(address4) //berubah menjadi bandung
+
+	//pointer asterisk operator
+	*address4 = Address{"Surabaya", "Jawa Timur", "Indonesia"}
+
+	fmt.Println(address3)
+	fmt.Println(address4)
 
 }
